@@ -1,4 +1,4 @@
-name: three
+name: fourworkflow
 on:
   workflow_dispatch:
   schedule:
