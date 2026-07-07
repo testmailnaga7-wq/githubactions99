@@ -1,0 +1,13 @@
+name: fiveworkflow
+on:
+  push:
+    branches:
+      - main 
+jobs:
+   testjob:
+      runs-on: ubuntu-latest
+      steps:
+        - name: print variable values
+          run: echo "Name is ${{ vars.NAME }}"
+        - name: passwordinfo
+          run : echo "Password is ${{ secrets.PASSWORD }}"
