@@ -1,0 +1,22 @@
+name: three
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: "5 *  * * *"
+     
+       
+jobs:
+  myjob1:
+       runs-on: windows-latest
+       steps:
+         - run: write-host "Good Morning from windows server"
+         - name: secondtask in myjob1
+           run: ipconfig
+            
+  myjob2:
+       runs-on: ubuntu-latest
+       needs: myjob1
+       steps:
+         - run: date
+         - name: secondtask in myjob1
+           run: ifconfig         
