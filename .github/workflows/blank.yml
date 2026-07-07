@@ -1,0 +1,17 @@
+name: secondworkflow
+on:
+   push:
+     branches:
+       - main
+       - dev 
+       - feature1
+jobs:
+  myjob1:
+       runs-on: windows-latest
+       steps:
+         - run: write-host "Good Morning from windows server"
+         - name: secondtask in myjob1
+           run: ipconfig
+           
+     
+     
