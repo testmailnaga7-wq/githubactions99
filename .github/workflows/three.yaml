@@ -1,0 +1,15 @@
+name: three
+on:
+   pull_request:
+     branches: [main]
+       
+jobs:
+  myjob1:
+       runs-on: windows-latest
+       steps:
+         - run: write-host "Good Morning from windows server"
+         - name: secondtask in myjob1
+           run: ipconfig
+           
+     
+     
