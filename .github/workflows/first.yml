@@ -1,12 +1,10 @@
-name: workflow1
-on: 
-   workflow_dispatch
+name: myworkflow1
+on:
+  workflow_dispatch
 jobs:
    myjob1:
-       runs-on: ubuntu-latest
-       steps:
-          -  name: job1task1
-             run: echo "Good Morning"
-           - name: job1task2     
-             run: echo "task2"
- 
+        runs-on: ubuntu-latest
+        steps:
+          - name: message1
+            run: echo "Good Morning"
+    
